@@ -37,6 +37,8 @@ python run.py \
   --grayscale
 ```
 cd /home/s5908297/workshop02_projects/Depth-Anything-V2
+
+```text
 python run.py \
   --encoder vits \
   --img-path /home/s5908297/workshop02_projects/Depth-Anything-V2/depth_anything_v2/images/london.jpg \
@@ -44,8 +46,9 @@ python run.py \
   --input-size 518 \
   --pred-only \
   --grayscale
-/home/s5908297/workshop02_projects/Depth-Anything-V2/depth_vis
-depth_vis/london.png
+```
+cd /home/s5908297/workshop02_projects/Depth-Anything-V2/depth_vis
+cd depth_vis/london.png
 
 
 **One real failure**
