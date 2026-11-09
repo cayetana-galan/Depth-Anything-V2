@@ -36,6 +36,17 @@ python run.py \
   --pred-only \
   --grayscale
 ```
+cd /home/s5908297/workshop02_projects/Depth-Anything-V2
+python run.py \
+  --encoder vits \
+  --img-path /home/s5908297/workshop02_projects/Depth-Anything-V2/depth_anything_v2/images/london.jpg \
+  --outdir /home/s5908297/workshop02_projects/Depth-Anything-V2/depth_vis \
+  --input-size 518 \
+  --pred-only \
+  --grayscale
+/home/s5908297/workshop02_projects/Depth-Anything-V2/depth_vis
+depth_vis/london.png
+
 
 **One real failure**
 
@@ -52,3 +63,20 @@ Which AI coding agent did you use?: copilot
 What did it change?: only venv python version
 
 How did you verify the change?: I asked it to do this
+
+**One real failure**
+
+Category: Output path
+
+Root cause: if the input is london.jpg and --outdir is the same folder as the image, the result becomes london.png in that same folder, not a failure. The issue is that the user expected the original file to be replaced or the app to fail when output is written alongside the input.
+
+Minimal fix: Save results to a separate output folder, such as depth_vis, and keep the original image in place
+
+**AI agent check**
+
+Which AI coding agent did you use?: copilot
+
+What did it change?: Confirmed the project behavior by reading run.py:39-73 and explained that the script saves a new PNG using the same file stem in --outdir, rather than modifying the original source file.
+
+How did you verify the change?: I asked it to do this
+
