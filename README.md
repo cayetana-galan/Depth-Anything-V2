@@ -36,8 +36,11 @@ python run.py \
   --pred-only \
   --grayscale
 ```
+**Type this onto the terminal**
+```text
 cd /home/s5908297/workshop02_projects/Depth-Anything-V2
-
+```
+**Type the Output**
 ```text
 python run.py \
   --encoder vits \
@@ -47,9 +50,13 @@ python run.py \
   --pred-only \
   --grayscale
 ```
-cd /home/s5908297/workshop02_projects/Depth-Anything-V2/depth_vis
-cd depth_vis/london.png
 
+```text
+cd /home/s5908297/workshop02_projects/Depth-Anything-V2/depth_vis
+```
+```text
+cd depth_vis/london.png
+```
 
 **One real failure**
 
